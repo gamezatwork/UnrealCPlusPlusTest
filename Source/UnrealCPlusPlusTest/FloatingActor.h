@@ -4,7 +4,9 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Actor.h"
+#include "TestInstancedClass_Base.h"
 #include "FloatingActor.generated.h"
+
 
 UCLASS()
 class UNREALCPLUSPLUSTEST_API AFloatingActor : public AActor
@@ -31,5 +33,8 @@ public:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Movement")
 	float moveHeight = 20.0f;
+
+	UPROPERTY(Instanced, EditDefaultsOnly)
+	UTestInstancedClass_Base* TestInstance;
 
 };
